@@ -13,6 +13,12 @@
 		23A2DE4A2158C1C5006C7548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A2DE492158C1C5006C7548 /* Assets.xcassets */; };
 		23A2DE4D2158C1C5006C7548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A2DE4B2158C1C5006C7548 /* LaunchScreen.storyboard */; };
 		23A2DE502158C1C5006C7548 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A2DE4F2158C1C5006C7548 /* main.m */; };
+		23A2DE582158C5DF006C7548 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A2DE572158C5DF006C7548 /* AVFoundation.framework */; };
+		23A2DE5A2158C850006C7548 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 23A2DE592158C850006C7548 /* audio.mp3 */; };
+		23A2DE94215A5643006C7548 /* RemoteAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A2DE93215A5643006C7548 /* RemoteAudioPlayer.m */; };
+		23A2DE97215B30C7006C7548 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A2DE96215B30C7006C7548 /* MediaPlayer.framework */; };
+		23A2DE9C215B9076006C7548 /* LocalAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A2DE9A215B9075006C7548 /* LocalAudioPlayer.m */; };
+		23A2DE9F215BAF38006C7548 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A2DE9D215BAF38006C7548 /* AudioPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,15 @@
 		23A2DE4C2158C1C5006C7548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23A2DE4E2158C1C5006C7548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23A2DE4F2158C1C5006C7548 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		23A2DE572158C5DF006C7548 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		23A2DE592158C850006C7548 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
+		23A2DE93215A5643006C7548 /* RemoteAudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoteAudioPlayer.m; sourceTree = "<group>"; };
+		23A2DE95215A5679006C7548 /* RemoteAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteAudioPlayer.h; sourceTree = "<group>"; };
+		23A2DE96215B30C7006C7548 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		23A2DE9A215B9075006C7548 /* LocalAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalAudioPlayer.m; sourceTree = "<group>"; };
+		23A2DE9B215B9076006C7548 /* LocalAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalAudioPlayer.h; sourceTree = "<group>"; };
+		23A2DE9D215BAF38006C7548 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		23A2DE9E215BAF38006C7548 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A2DE97215B30C7006C7548 /* MediaPlayer.framework in Frameworks */,
+				23A2DE582158C5DF006C7548 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +61,7 @@
 			children = (
 				23A2DE3F2158C1C3006C7548 /* AudioEngine */,
 				23A2DE3E2158C1C3006C7548 /* Products */,
+				23A2DE562158C5DF006C7548 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +76,17 @@
 		23A2DE3F2158C1C3006C7548 /* AudioEngine */ = {
 			isa = PBXGroup;
 			children = (
+				23A2DE592158C850006C7548 /* audio.mp3 */,
 				23A2DE402158C1C4006C7548 /* AppDelegate.h */,
 				23A2DE412158C1C4006C7548 /* AppDelegate.m */,
 				23A2DE432158C1C4006C7548 /* ViewController.h */,
 				23A2DE442158C1C4006C7548 /* ViewController.m */,
+				23A2DE9E215BAF38006C7548 /* AudioPlayer.h */,
+				23A2DE9D215BAF38006C7548 /* AudioPlayer.m */,
+				23A2DE9B215B9076006C7548 /* LocalAudioPlayer.h */,
+				23A2DE9A215B9075006C7548 /* LocalAudioPlayer.m */,
+				23A2DE95215A5679006C7548 /* RemoteAudioPlayer.h */,
+				23A2DE93215A5643006C7548 /* RemoteAudioPlayer.m */,
 				23A2DE462158C1C4006C7548 /* Main.storyboard */,
 				23A2DE492158C1C5006C7548 /* Assets.xcassets */,
 				23A2DE4B2158C1C5006C7548 /* LaunchScreen.storyboard */,
@@ -69,6 +94,15 @@
 				23A2DE4F2158C1C5006C7548 /* main.m */,
 			);
 			path = AudioEngine;
+			sourceTree = "<group>";
+		};
+		23A2DE562158C5DF006C7548 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23A2DE96215B30C7006C7548 /* MediaPlayer.framework */,
+				23A2DE572158C5DF006C7548 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +136,11 @@
 				TargetAttributes = {
 					23A2DE3C2158C1C3006C7548 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -129,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A2DE4D2158C1C5006C7548 /* LaunchScreen.storyboard in Resources */,
+				23A2DE5A2158C850006C7548 /* audio.mp3 in Resources */,
 				23A2DE4A2158C1C5006C7548 /* Assets.xcassets in Resources */,
 				23A2DE482158C1C4006C7548 /* Main.storyboard in Resources */,
 			);
@@ -142,8 +182,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A2DE452158C1C4006C7548 /* ViewController.m in Sources */,
+				23A2DE9F215BAF38006C7548 /* AudioPlayer.m in Sources */,
 				23A2DE502158C1C5006C7548 /* main.m in Sources */,
 				23A2DE422158C1C4006C7548 /* AppDelegate.m in Sources */,
+				23A2DE94215A5643006C7548 /* RemoteAudioPlayer.m in Sources */,
+				23A2DE9C215B9076006C7548 /* LocalAudioPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,11 +331,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TTQ925T64;
 				INFOPLIST_FILE = AudioEngine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joshua.AudioEngine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AudioEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,11 +349,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TTQ925T64;
 				INFOPLIST_FILE = AudioEngine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joshua.AudioEngine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AudioEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
